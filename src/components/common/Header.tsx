@@ -62,6 +62,7 @@ export function Header() {
               aria-label="เปิดเมนู"
               className="mobile-menu-trigger fixed left-4 top-20 size-12 rounded-full p-0 shadow-lg shadow-black/10 md:left-5 md:top-5 lg:hidden"
               size="sm"
+              type="button"
               variant="secondary"
             >
               <span className="hamburger-lines" aria-hidden="true">
@@ -72,10 +73,13 @@ export function Header() {
             </Button>
           </Dialog.Trigger>
           <Dialog.Portal>
-            <Dialog.Overlay className="mobile-menu-overlay fixed inset-0 z-40 bg-black/55 backdrop-blur-md" />
+            <Dialog.Overlay
+              className="mobile-menu-overlay fixed inset-0 z-40 bg-black/55 backdrop-blur-md"
+              onClick={closeMobileMenu}
+            />
             <Dialog.Content
               aria-describedby={undefined}
-              className="mobile-menu-content fixed inset-x-3 top-3 z-50 overflow-hidden rounded-[1.75rem] bg-white text-black shadow-2xl sm:inset-x-4 sm:top-4"
+              className="mobile-menu-content fixed inset-3 z-50 flex max-h-[calc(100svh-1.5rem)] flex-col overflow-hidden rounded-[1.75rem] bg-white text-black shadow-2xl sm:inset-4 sm:max-h-[calc(100svh-2rem)]"
             >
               <div className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-black/[0.04]" />
               <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.05))]" />
@@ -88,7 +92,9 @@ export function Header() {
                   <Button
                     aria-label="ปิดเมนู"
                     className="menu-close-button size-10 p-0"
+                    onClick={closeMobileMenu}
                     size="sm"
+                    type="button"
                     variant="ghost"
                   >
                     <X className="size-5" aria-hidden="true" />
@@ -102,7 +108,7 @@ export function Header() {
                 AIR
               </div>
 
-              <div className="menu-items relative z-10 mt-2 grid gap-1 px-3 pb-5 sm:px-6">
+              <div className="menu-items relative z-10 mt-2 grid flex-1 content-center gap-1 px-3 pb-5 sm:px-6">
                 {navigationItems.map((item) => (
                   <NavLink
                     key={item.href}
