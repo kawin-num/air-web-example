@@ -60,7 +60,7 @@ export function Header() {
           <Dialog.Trigger asChild>
             <Button
               aria-label="เปิดเมนู"
-              className="mobile-menu-trigger fixed left-4 top-20 size-12 rounded-full p-0 shadow-lg shadow-black/10 md:left-5 md:top-5 lg:hidden"
+              className="mobile-menu-trigger fixed left-4 top-20 size-12 rounded-full border-black/10 bg-white p-0 shadow-[0_14px_35px_rgba(0,0,0,0.18)] md:left-5 lg:hidden"
               size="sm"
               type="button"
               variant="secondary"
