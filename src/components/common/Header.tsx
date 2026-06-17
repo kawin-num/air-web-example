@@ -79,13 +79,13 @@ export function Header() {
             />
             <Dialog.Content
               aria-describedby={undefined}
-              className="mobile-menu-content fixed inset-3 z-50 flex max-h-[calc(100svh-1.5rem)] flex-col overflow-hidden rounded-[1.75rem] bg-white text-black shadow-2xl sm:inset-4 sm:max-h-[calc(100svh-2rem)]"
+              className="mobile-menu-content fixed inset-x-0 top-2 z-50 mx-auto flex max-h-[calc(100svh-1rem)] w-[calc(100%-0.5rem)] max-w-[104rem] flex-col overflow-hidden rounded-[1.75rem] bg-white text-black shadow-2xl sm:top-2 sm:w-[calc(100%-1rem)]"
             >
-              <div className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-black/[0.04]" />
-              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.05))]" />
+              <div className="pointer-events-none absolute -right-14 -top-24 size-48 rounded-full bg-black/[0.04] sm:size-64" />
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.045))]" />
 
-              <div className="relative flex items-center justify-between p-6">
-                <Dialog.Title className="menu-title text-sm font-semibold uppercase tracking-[0.24em]">
+              <div className="relative flex items-center justify-between px-6 py-5 sm:px-8">
+                <Dialog.Title className="menu-title text-xs font-semibold uppercase tracking-[0.32em] sm:text-sm">
                   Air Business Center
                 </Dialog.Title>
                 <Dialog.Close asChild>
@@ -102,30 +102,30 @@ export function Header() {
                 </Dialog.Close>
               </div>
               <div
-                className="menu-wordmark pointer-events-none px-6 font-display text-[clamp(4.5rem,32vw,12rem)] font-semibold uppercase leading-[0.72] tracking-[-0.11em] text-black/[0.04]"
+                className="menu-wordmark pointer-events-none px-6 font-display text-[clamp(5.4rem,16vw,10rem)] font-semibold uppercase leading-[0.72] tracking-[-0.11em] text-black/[0.035] sm:px-8"
                 aria-hidden="true"
               >
                 AIR
               </div>
 
-              <div className="menu-items relative z-10 mt-2 grid flex-1 content-center gap-1 px-3 pb-5 sm:px-6">
+              <div className="menu-items relative z-10 -mt-2 grid gap-2 px-4 pb-8 sm:-mt-4 sm:px-8 sm:pb-8">
                 {navigationItems.map((item) => (
                   <NavLink
                     key={item.href}
                     to={item.href}
-                    className="menu-link group flex items-center justify-between rounded-[1.35rem] px-4 py-4 text-3xl font-medium uppercase tracking-[-0.055em] text-black transition hover:bg-black/5 sm:text-5xl"
+                    className="menu-link group flex items-center justify-between rounded-[1.35rem] px-3 py-2 text-[clamp(2.4rem,7vw,3.1rem)] font-medium uppercase leading-none tracking-[-0.075em] text-black transition hover:bg-black/5 sm:px-4 sm:py-3"
                     onClick={closeMobileMenu}
                   >
                     <span>{item.label}</span>
                     <ArrowUpRight
-                      className="size-5 translate-y-1 opacity-35 transition group-hover:translate-x-1 group-hover:-translate-y-0 group-hover:opacity-100 sm:size-7"
+                      className="size-5 translate-y-1 opacity-35 transition group-hover:translate-x-1 group-hover:-translate-y-0 group-hover:opacity-100 sm:size-6"
                       aria-hidden="true"
                     />
                   </NavLink>
                 ))}
               </div>
 
-              <div className="menu-footer relative z-10 flex items-end justify-between gap-6 border-t border-black/10 px-6 py-5">
+              <div className="menu-footer relative z-10 mt-auto flex items-end justify-between gap-6 border-t border-black/10 px-6 py-5 sm:px-8">
                 <p className="max-w-[12rem] text-xs font-semibold uppercase leading-5 tracking-wide text-black/45">
                   Premium office spaces with architectural momentum.
                 </p>
