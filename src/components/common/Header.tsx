@@ -1,5 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { ArrowUpRight, Heart, X } from 'lucide-react'
+import { ArrowUpRight, Globe2, X } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 import { navigationItems } from '../../data/navigation'
 import { useUiStore } from '../../stores/useUiStore'
@@ -25,10 +25,14 @@ export function Header() {
       >
         <Link
           to="/"
-          className="grid size-12 place-items-center rounded-full bg-white text-sm font-semibold uppercase shadow-lg shadow-black/10 backdrop-blur"
-          aria-label="Air Center home"
+          className="grid h-12 w-32 place-items-center rounded-full bg-white px-4 shadow-lg shadow-blue-950/10 backdrop-blur"
+          aria-label="Bluebik home"
         >
-          <span aria-hidden="true">Air</span>
+          <img
+            alt=""
+            className="h-7 w-full object-contain"
+            src="/bluebik/design/site-logo-2.svg"
+          />
         </Link>
 
         <div className="hidden items-center rounded-full border border-black/10 bg-white/80 p-1 shadow-lg shadow-black/5 backdrop-blur-xl lg:flex">
@@ -41,18 +45,19 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <Button
-            aria-label="Favorites"
-            className="hidden size-12 rounded-full p-0 sm:inline-flex"
+            aria-label="เปลี่ยนภาษา"
+            className="hidden size-12 rounded-full p-0 text-xs font-bold sm:inline-flex"
             variant="secondary"
           >
-            <Heart className="size-5" aria-hidden="true" />
+            TH
+            <Globe2 className="ml-1 size-4" aria-hidden="true" />
           </Button>
           <Button
             asChild
             className="hidden uppercase tracking-wide md:inline-flex"
             size="sm"
           >
-            <Link to="/contact">Choose an office</Link>
+            <Link to="/contact">ติดต่อเรา</Link>
           </Button>
         </div>
 
@@ -86,7 +91,7 @@ export function Header() {
 
               <div className="relative flex items-center justify-between px-6 py-5 sm:px-8">
                 <Dialog.Title className="menu-title text-xs font-semibold uppercase tracking-[0.32em] sm:text-sm">
-                  Air Business Center
+                  Bluebik Group
                 </Dialog.Title>
                 <Dialog.Close asChild>
                   <Button
@@ -105,7 +110,7 @@ export function Header() {
                 className="menu-wordmark pointer-events-none px-6 font-display text-[clamp(5.4rem,16vw,10rem)] font-semibold uppercase leading-[0.72] tracking-[-0.11em] text-black/[0.035] sm:px-8"
                 aria-hidden="true"
               >
-                AIR
+                BBIK
               </div>
 
               <div className="menu-items relative z-10 -mt-2 grid gap-2 px-4 pb-8 sm:-mt-4 sm:px-8 sm:pb-8">
@@ -127,11 +132,11 @@ export function Header() {
 
               <div className="menu-footer relative z-10 mt-auto flex items-end justify-between gap-6 border-t border-black/10 px-6 py-5 sm:px-8">
                 <p className="max-w-[12rem] text-xs font-semibold uppercase leading-5 tracking-wide text-black/45">
-                  Premium office spaces with architectural momentum.
+                  Ambition to Excellence through digital transformation.
                 </p>
                 <Button asChild className="uppercase tracking-wide" size="sm">
                   <Link to="/contact" onClick={closeMobileMenu}>
-                    Choose
+                    Connect
                   </Link>
                 </Button>
               </div>

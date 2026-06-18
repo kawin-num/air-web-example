@@ -16,28 +16,29 @@ import { Badge } from '../components/ui/Badge'
 import { renderWithRouter } from '../test/test-utils'
 
 describe('visual editorial sections', () => {
-  it('renders the redesigned hero with AIR-style messaging and scroll action', () => {
+  it('renders the redesigned hero with Bluebik messaging and services scroll action', () => {
     renderWithRouter(<HeroSection />)
 
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /the architecture\s*of new success/i,
+        name: /ambition\s*to excellence/i,
       }),
     ).toBeInTheDocument()
-    expect(
-      screen.getByRole('link', { name: /the momentum to rise higher/i }),
-    ).toHaveAttribute('href', '/#impulse')
+    expect(screen.getByRole('link', { name: /ดูบริการของ Bluebik/i })).toHaveAttribute(
+      'href',
+      '/#services',
+    )
   })
 
   it('renders the momentum editorial section', () => {
     renderWithRouter(<MomentumSection />)
 
-    expect(screen.getByText('The momentum')).toBeInTheDocument()
-    expect(screen.getByText('to rise higher')).toBeInTheDocument()
+    expect(screen.getByText('What we do')).toBeInTheDocument()
+    expect(screen.getByText('for transformation')).toBeInTheDocument()
   })
 
-  it('renders feature and format content for office positioning', () => {
+  it('renders feature and format content for consulting positioning', () => {
     renderWithRouter(
       <>
         <FeatureGrid />
@@ -45,9 +46,9 @@ describe('visual editorial sections', () => {
       </>,
     )
 
-    expect(screen.getByText('Class A business environment')).toBeInTheDocument()
-    expect(screen.getByText('A scale for every ambition')).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Choose an office' })).toBeInTheDocument()
+    expect(screen.getByText('Ambition to Excellence')).toBeInTheDocument()
+    expect(screen.getByText('Integrated services for every ambition')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'ดูบริการทั้งหมด' })).toBeInTheDocument()
   })
 
   it('renders expanded cinematic content sections', () => {
@@ -60,11 +61,15 @@ describe('visual editorial sections', () => {
       </>,
     )
 
-    expect(screen.getByText(/Efficient layouts\. Impressive views/i)).toBeInTheDocument()
-    expect(screen.getByText('Everything works before you arrive')).toBeInTheDocument()
-    expect(screen.getByText('Connected to the city rhythm')).toBeInTheDocument()
-    expect(screen.getByText('Acquisition without friction')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Request a consultation' })).toHaveAttribute(
+    expect(screen.getByText(/Strategy\. Technology\. Delivery/i)).toBeInTheDocument()
+    expect(
+      screen.getByText('Everything connects before transformation scales'),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText('Built for industries moving at digital speed'),
+    ).toBeInTheDocument()
+    expect(screen.getByText("Let's connect & transform together")).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'ติดต่อเรา' })).toHaveAttribute(
       'href',
       '/contact',
     )
@@ -74,24 +79,24 @@ describe('visual editorial sections', () => {
     const user = userEvent.setup()
     renderWithRouter(<PlanExplorerSection />)
 
-    expect(screen.getByText('Open planning grid')).toBeInTheDocument()
+    expect(screen.getByText('Ambition to Excellence')).toBeInTheDocument()
 
-    await user.click(screen.getByRole('button', { name: 'Sky terrace' }))
+    await user.click(screen.getByRole('button', { name: 'Delivery' }))
 
-    expect(screen.getByText('Shared premium amenities')).toBeInTheDocument()
+    expect(screen.getByText('Transform Together')).toBeInTheDocument()
   })
 
   it('renders reusable heading and badge variants', () => {
     renderWithRouter(
       <>
         <AnimatedReveal>Animated content</AnimatedReveal>
-        <SectionHeading eyebrow="Office" title="Premium infrastructure" />
+        <SectionHeading eyebrow="Service" title="Digital transformation" />
         <Badge tone="dark">Dark badge</Badge>
       </>,
     )
 
     expect(screen.getByText('Animated content')).toBeInTheDocument()
-    expect(screen.getByText('Premium infrastructure')).toBeInTheDocument()
+    expect(screen.getByText('Digital transformation')).toBeInTheDocument()
     expect(screen.getByText('Dark badge')).toBeInTheDocument()
   })
 })

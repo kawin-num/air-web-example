@@ -1,9 +1,10 @@
 export interface SpaceExperience {
   id: string
   title: string
-  location: string
+  category: string
   summary: string
-  capacity: number
+  result: string
+  asset: string
   accent: 'blue' | 'pearl' | 'slate'
 }
 

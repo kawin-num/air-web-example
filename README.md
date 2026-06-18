@@ -1,6 +1,6 @@
 # air-website-example
 
-Production-ready React + Vite + TypeScript website example สำหรับ Company Profile / Landing Page ที่ได้แรงบันดาลใจจาก visual pattern แบบ atmospheric architecture และ immersive scrolling โดยไม่คัดลอก asset หรือเนื้อหาจากเว็บไซต์ต้นแบบ
+Production-ready React + Vite + TypeScript website example สำหรับ Company Profile / Landing Page แนว tech consulting โดยใช้ content และ asset ของ Bluebik สำหรับ hero, services, insights, newsroom, testimonials และ corporate CTA
 
 ## Tech stack
 
@@ -51,6 +51,8 @@ src/
   types/        shared TypeScript types
   utils/        pure utilities
 ```
+
+Bluebik assets ที่ใช้ในหน้าเว็บถูกเก็บไว้ใน `public/bluebik/` แยกตามประเภท เช่น `design`, `services`, `clients`, `social` และ `favicon`
 
 ## Architecture notes
 

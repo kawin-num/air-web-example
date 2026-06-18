@@ -2,21 +2,21 @@ import { Button } from '../ui/Button'
 import { AnimatedReveal } from '../common/AnimatedReveal'
 
 const formats = [
-  'Offices from compact suites to headquarters',
-  'Entire floors with flexible planning logic',
-  'Standalone buildings for signature companies',
+  'Management Consulting, Strategy และ Enterprise Transformation',
+  'Big Data, Artificial Intelligence และ Digital Excellence & Delivery',
+  'Cybersecurity, ERP, Supply Chain และ Strategic PMO',
 ]
 
 export function FormatSection() {
   return (
-    <section className="bg-black px-4 py-20 text-white sm:px-5 md:py-28">
+    <section className="bg-bluebik-950 px-4 py-20 text-white sm:px-5 md:py-28">
       <div className="mx-auto grid max-w-[1920px] gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-end">
         <AnimatedReveal>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/40">
-            Building formats
+            Service portfolio
           </p>
           <h2 className="air-editorial-text mt-8 max-w-5xl font-display font-normal">
-            A scale for every ambition
+            Integrated services for every ambition
           </h2>
         </AnimatedReveal>
         <div className="grid gap-3">
@@ -33,7 +33,7 @@ export function FormatSection() {
             </AnimatedReveal>
           ))}
           <Button className="mt-4 w-fit" variant="secondary">
-            Choose an office
+            ดูบริการทั้งหมด
           </Button>
         </div>
       </div>

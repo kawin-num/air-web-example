@@ -1,31 +1,82 @@
 import { Link } from 'react-router-dom'
 import { navigationItems } from '../../data/navigation'
 
+const footerLinks = [
+  'บทความ',
+  'ข่าวสาร',
+  'ร่วมงานกับเรา',
+  'นักลงทุนสัมพันธ์',
+  'นโยบายความเป็นส่วนตัว',
+  'นโยบายการใช้งานคุกกี้',
+]
+
+const socialIcons = [
+  { label: 'Facebook', src: '/bluebik/social/icon-fb.svg' },
+  { label: 'Instagram', src: '/bluebik/social/icon-ig.svg' },
+  { label: 'LinkedIn', src: '/bluebik/social/icon-linkedin.svg' },
+  { label: 'TikTok', src: '/bluebik/social/icon-tiktok.svg' },
+  { label: 'X', src: '/bluebik/social/icon-x.svg' },
+]
+
 export function Footer() {
   return (
-    <footer className="border-t border-white/70 bg-space-950 text-white">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.5fr_1fr] lg:px-8">
+    <footer className="relative overflow-hidden border-t border-white/70 bg-bluebik-950 text-white">
+      <img
+        alt=""
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-full w-full object-cover opacity-45"
+        src="/bluebik/design/footer-gradient.svg"
+      />
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.35fr_1fr] lg:px-8">
         <div>
-          <p className="font-display text-2xl font-semibold">Air Center</p>
-          <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300">
-            Company profile template สำหรับธุรกิจที่ต้องการสื่อสารประสบการณ์ พื้นที่
-            และบริการด้วยเว็บไซต์ที่เร็ว เข้าถึงง่าย และพร้อมต่อยอดจริง
+          <img
+            alt="Bluebik"
+            className="h-10 w-auto brightness-0 invert"
+            src="/bluebik/design/footer-logo.svg"
+          />
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-blue-100/85">
+            Bluebik
+            ที่ปรึกษาธุรกิจที่จะนำพาธุรกิจสู่ความสำเร็จด้วยกลยุทธ์อัจฉริยะและเทคโนโลยีล้ำสมัย
+            เชี่ยวชาญด้าน Digital Transformation, Enterprise Transformation, AI-Led
+            Integrated Services, Big Data & AI, Cybersecurity และ Strategic PMO
+          </p>
+          <p className="mt-8 font-display text-4xl font-semibold uppercase leading-none tracking-[-0.06em] md:text-6xl">
+            Let&apos;s connect & transform together
           </p>
         </div>
-        <nav
-          aria-label="เมนูท้ายเว็บไซต์"
-          className="flex flex-wrap gap-3 md:justify-end"
-        >
-          {navigationItems.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className="rounded-full px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="grid content-between gap-8">
+          <nav
+            aria-label="เมนูท้ายเว็บไซต์"
+            className="flex flex-wrap gap-3 md:justify-end"
+          >
+            {navigationItems.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="rounded-full border border-white/15 px-3 py-2 text-sm text-blue-100 hover:bg-white/10 hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="grid gap-3 text-sm text-blue-100/75 md:text-right">
+            {footerLinks.map((link) => (
+              <span key={link}>{link}</span>
+            ))}
+            <div className="flex gap-3 pt-4 md:justify-end">
+              {socialIcons.map((icon) => (
+                <span
+                  key={icon.label}
+                  className="grid size-9 place-items-center rounded-full border border-white/15 bg-white/10"
+                >
+                  <img alt={icon.label} className="size-4" src={icon.src} />
+                </span>
+              ))}
+            </div>
+            <span className="pt-4 text-xs text-white/45">
+              © 2025 Bluebik Group. All Rights Reserved.
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   )

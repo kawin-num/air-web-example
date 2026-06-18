@@ -8,7 +8,7 @@ export function FeaturedSpaces() {
   const spaces = data.length > 0 ? data : fallbackSpaces
 
   if (isLoading) {
-    return <LoadingFallback label="กำลังโหลดพื้นที่แนะนำ" />
+    return <LoadingFallback label="กำลังโหลดบริการแนะนำ" />
   }
 
   return (
@@ -18,10 +18,10 @@ export function FeaturedSpaces() {
           className="mb-6 rounded-3xl border border-black/10 bg-black/5 px-5 py-4 text-sm font-medium uppercase text-black/70"
           role="status"
         >
-          โหลดข้อมูลจาก API ไม่สำเร็จ จึงแสดงข้อมูลสำรองสำหรับหน้าเว็บตัวอย่าง
+          โหลดข้อมูลจาก API ไม่สำเร็จ จึงแสดงบริการสำรองจาก Bluebik homepage
         </div>
       ) : null}
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {spaces.map((space) => (
           <SpaceCard key={space.id} space={space} />
         ))}

@@ -12,8 +12,8 @@ describe('Header mobile menu', () => {
     await user.click(screen.getByRole('button', { name: 'เปิดเมนู' }))
 
     expect(screen.getByRole('dialog')).toBeInTheDocument()
-    expect(screen.getByText('Air Business Center')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /overview/i })).toBeInTheDocument()
+    expect(screen.getByText('Bluebik Group')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /หน้ารวม/i })).toBeInTheDocument()
 
     await user.click(screen.getByRole('button', { name: 'ปิดเมนู' }))
 
@@ -25,7 +25,7 @@ describe('Header mobile menu', () => {
     renderWithRouter(<Header />)
 
     await user.click(screen.getByRole('button', { name: 'เปิดเมนู' }))
-    await user.click(screen.getByRole('link', { name: /contacts/i }))
+    await user.click(screen.getByRole('link', { name: /ติดต่อเรา/i }))
 
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
