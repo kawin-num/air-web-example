@@ -1,3 +1,5 @@
+import { publicAsset } from '../../utils/publicAsset'
+
 export function OrbitShowcase() {
   return (
     <div
@@ -8,12 +10,12 @@ export function OrbitShowcase() {
       <img
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-60"
-        src="/bluebik/design/vectorbg.svg"
+        src={publicAsset('bluebik/design/vectorbg.svg')}
       />
       <img
         alt=""
         className="air-float absolute left-1/2 top-8 h-[70%] w-[80%] -translate-x-1/2 object-contain opacity-80"
-        src="/bluebik/design/float-gradient.svg"
+        src={publicAsset('bluebik/design/float-gradient.svg')}
       />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.9),transparent_28rem),linear-gradient(180deg,rgba(255,255,255,0.18),rgba(4,36,109,0.55)_72%)]" />
       <div className="absolute left-[10%] top-[24%] size-48 rounded-full border border-white/25 bg-white/10 backdrop-blur-md" />

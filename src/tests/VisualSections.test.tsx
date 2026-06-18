@@ -22,10 +22,10 @@ describe('visual editorial sections', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /ambition\s*to excellence/i,
+        name: /Ambition to Excellence/i,
       }),
     ).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /ดูบริการของ Bluebik/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /Scroll Down/i })).toHaveAttribute(
       'href',
       '/#services',
     )
@@ -34,8 +34,10 @@ describe('visual editorial sections', () => {
   it('renders the momentum editorial section', () => {
     renderWithRouter(<MomentumSection />)
 
-    expect(screen.getByText('What we do')).toBeInTheDocument()
-    expect(screen.getByText('for transformation')).toBeInTheDocument()
+    expect(screen.getAllByText('Ambition to Excellence').length).toBeGreaterThan(0)
+    expect(
+      screen.getByText(/บลูบิคเป็นที่ปรึกษาด้านกลยุทธ์และการจัดการ/i),
+    ).toBeInTheDocument()
   })
 
   it('renders feature and format content for consulting positioning', () => {

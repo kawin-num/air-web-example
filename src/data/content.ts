@@ -1,19 +1,30 @@
 import type { SpaceExperience } from '../types/space'
+import { publicAsset } from '../utils/publicAsset'
 
 export const heroStories = [
   {
-    eyebrow: 'AI-Led Enterprise Digital Transformation',
-    title: 'AI-Led Enterprise Digital Transformation',
+    eyebrow: 'Ambition to Excellence',
+    title: 'Ambition to Excellence',
     description:
-      'บลูบิคเป็นพาร์ตเนอร์ที่ปรึกษาชั้นนำด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร และการประยุกต์ใช้ AI ระดับองค์กร',
-    cta: 'อ่านเพิ่มเติม',
+      'บลูบิคเป็นที่ปรึกษาด้านกลยุทธ์และการจัดการด้วยนวัตกรรมและเทคโนโลยีระดับโลก และผู้ให้บริการด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร',
+    video: publicAsset('bluebik/video/Home-Page-Banner1.mp4'),
+    poster: publicAsset('bluebik/hero/Website-Banner-1600x900px-1.jpg'),
   },
   {
-    eyebrow: 'Thailand’s AI-Driven Leadership Report',
-    title: 'Thailand’s AI-Driven Leadership Report',
+    eyebrow: 'Ambition to Excellence',
+    title: 'Ambition to Excellence',
     description:
-      'Bluebik Group ร่วมกับ THE STANDARD และ Sauce Skills เผยแพร่รายงานเชิงลึกจากการถอดบทเรียนผู้บริหารระดับสูงกว่า 100 องค์กรไทย',
-    cta: 'อ่านรายงาน',
+      'บลูบิคเป็นที่ปรึกษาด้านกลยุทธ์และการจัดการด้วยนวัตกรรมและเทคโนโลยีระดับโลก และผู้ให้บริการด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร',
+    video: publicAsset('bluebik/video/VideoHero-Homep-page.mp4'),
+    poster: publicAsset('bluebik/hero/footer-banner.jpg'),
+  },
+  {
+    eyebrow: 'Ambition to Excellence',
+    title: 'Ambition to Excellence',
+    description:
+      'บลูบิคเป็นที่ปรึกษาด้านกลยุทธ์และการจัดการด้วยนวัตกรรมและเทคโนโลยีระดับโลก และผู้ให้บริการด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร',
+    video: publicAsset('bluebik/video/Home-Page-Banner3.mp4'),
+    poster: publicAsset('bluebik/hero/Homepage-Herobanner-CEO-Survey.jpg'),
   },
 ]
 
@@ -46,7 +57,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ให้คำแนะนำตั้งแต่การกำหนดทิศทางเชิงกลยุทธ์ การบริหารทรัพยากร และการติดตามความคืบหน้าของโครงการผ่านเครื่องมือดิจิทัล',
     result: 'Business strategy to execution',
-    asset: '/bluebik/services/01-MC_Des.jpg',
+    asset: publicAsset('bluebik/services/01-MC_Des.jpg'),
     accent: 'blue',
   },
   {
@@ -56,7 +67,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ให้คำปรึกษาด้านกลยุทธ์และการจัดการข้อมูลขนาดใหญ่ รวมถึงปัญญาประดิษฐ์ เพื่อช่วยให้ธุรกิจใช้ข้อมูลให้เกิดประโยชน์สูงสุด',
     result: 'Enterprise data advantage',
-    asset: '/bluebik/services/03-AI_Des.jpg',
+    asset: publicAsset('bluebik/services/03-AI_Des.jpg'),
     accent: 'pearl',
   },
   {
@@ -66,7 +77,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ครอบคลุมการนำเทคโนโลยีเข้ามาปรับปรุงกระบวนการทำงาน เพิ่มประสิทธิภาพ และเสริมศักยภาพในการแข่งขัน',
     result: 'Digital delivery at scale',
-    asset: '/bluebik/services/02-DX_Des.jpg',
+    asset: publicAsset('bluebik/services/02-DX_Des.jpg'),
     accent: 'slate',
   },
   {
@@ -76,7 +87,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ช่วยองค์กรวางมาตรการป้องกันภัยคุกคามทางไซเบอร์ ลดความเสี่ยง และสร้างระบบความปลอดภัยที่มั่นคง',
     result: 'Trusted digital operations',
-    asset: '/bluebik/services/04-TITANS_Des.jpg',
+    asset: publicAsset('bluebik/services/04-TITANS_Des.jpg'),
     accent: 'blue',
   },
   {
@@ -86,7 +97,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'สร้างสรรค์นวัตกรรมด้วยระบบ ERP ที่ช่วยจัดการทรัพยากรองค์กรอย่างเป็นระบบ พร้อมเสริมศักยภาพด้วย SAP',
     result: 'Enterprise resource clarity',
-    asset: '/bluebik/services/05-SAP_Des.jpg',
+    asset: publicAsset('bluebik/services/05-SAP_Des.jpg'),
     accent: 'pearl',
   },
   {
@@ -96,7 +107,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ออกแบบประสบการณ์ที่ขับเคลื่อนธุรกิจ โดยมีมนุษย์เป็นศูนย์กลาง ผสานความคิดสร้างสรรค์เข้ากับเทคโนโลยี',
     result: 'Products people love',
-    asset: '/bluebik/services/06-XD_Des.jpg',
+    asset: publicAsset('bluebik/services/06-XD_Des.jpg'),
     accent: 'slate',
   },
 ]
@@ -108,7 +119,7 @@ export const serviceHighlights = [
     title: 'ออกแบบแนวทางบริหารโครงการที่ตอบสนองต่อการเปลี่ยนแปลงได้เร็ว',
     description:
       'เพิ่มความโปร่งใส ลดความซับซ้อน และเพิ่มประสิทธิภาพในการตัดสินใจ เพื่อขับเคลื่อนโครงการให้สำเร็จอย่างยั่งยืน',
-    asset: '/bluebik/services/07-PMO_Des.jpg',
+    asset: publicAsset('bluebik/services/07-PMO_Des.jpg'),
   },
   {
     id: 'dynamics-365',
@@ -116,7 +127,7 @@ export const serviceHighlights = [
     title: 'บริหารการเงินและซัพพลายเชนด้วย ERP อัจฉริยะ',
     description:
       'ช่วยเพิ่มความคล่องตัว ลดต้นทุน และเพิ่มประสิทธิภาพการดำเนินงานด้วย Dynamics 365 Finance & Supply Chain Management',
-    asset: '/bluebik/services/05-SAP_Des.jpg',
+    asset: publicAsset('bluebik/services/05-SAP_Des.jpg'),
   },
   {
     id: 'digital-trust',
@@ -124,7 +135,7 @@ export const serviceHighlights = [
     title: 'สร้างความเชื่อมั่นให้ระบบดิจิทัลตั้งแต่กลยุทธ์ถึงการปฏิบัติ',
     description:
       'วางโครงสร้างความปลอดภัยที่มั่นคง ลดความเสี่ยงทางไซเบอร์ และสร้าง digital trust สำหรับการเติบโต',
-    asset: '/bluebik/services/04-TITANS_Des.jpg',
+    asset: publicAsset('bluebik/services/04-TITANS_Des.jpg'),
   },
 ]
 
@@ -187,18 +198,33 @@ export const insights = [
     category: 'Artificial Intelligence',
     title: '‘AI ทำเกินหน้าที่’ ภัยเงียบที่กำลังสั่นคลอนความมั่นคงปลอดภัยไซเบอร์องค์กร',
     date: '28 พฤษภาคม 2569',
+    image: publicAsset('bluebik/insights/Thumbnail-Zero-Trust-AI-Access-1.png'),
   },
   {
     category: 'Business & Technology',
     title:
       'เมื่อ Workflow กลายเป็นต้นทุนแฝงขององค์กร ปลดล็อกการทำงานให้เร็ว โปร่งใส ด้วย K2',
     date: '14 พฤษภาคม 2569',
+    image: publicAsset('bluebik/insights/2026-03-30_Info-K2_Thumnail.jpg'),
   },
   {
     category: 'Artificial Intelligence',
     title:
       'ชัยชนะบนสมรภูมิการให้บริการยุค AI-First ต้องเริ่มด้วย AI-Enhanced Customer Service',
     date: '6 พฤษภาคม 2569',
+    image: publicAsset('bluebik/insights/Thumbnail-AI-Enhanced-Customer-Service.png'),
+  },
+  {
+    category: 'Artificial Intelligence',
+    title: 'ปฏิรูปสถาปัตยกรรมแห่งอนาคต ‘AI Workflow Orchestration’ ทลายปัญหา Siloed AI',
+    date: '3 เมษายน 2569',
+    image: publicAsset('bluebik/insights/Thumbnail-AI-Orchestration.jpg'),
+  },
+  {
+    category: 'Artificial Intelligence',
+    title: 'Agentic AI: ถึงเวลาที่องค์กรต้องเปลี่ยนจาก “การทดลอง” สู่ “การสร้างผลลัพธ์”',
+    date: '24 มีนาคม 2569',
+    image: publicAsset('bluebik/insights/Agentic_AI_Thumnail.jpg'),
   },
 ]
 
@@ -207,16 +233,19 @@ export const newsroom = [
     title:
       'บลูบิค แนะเฟรมเวิร์ก 5 ขั้นตอนทำ Cloud Migration ให้สำเร็จ เพื่อต่อยอดเทคโนโลยีและแข่งขันได้อย่างยั่งยืน',
     date: '8 มิถุนายน 2569',
+    image: publicAsset('bluebik/news/Press-Release-AI-Transformation_Thumbnail.jpg'),
   },
   {
     title:
       'บลูบิค Q1/69 โตแกร่งกวาดรายได้ 371 ลบ. กำไร 81 ลบ. มั่นใจผลประกอบการทั้งปีโตตามเป้า 20%',
     date: '13 พฤษภาคม 2569',
+    image: publicAsset('bluebik/news/News003-Thumbnail.jpg'),
   },
   {
     title:
       'บลูบิค ตอกย้ำภาพ AI-Driven Organization ระดับสากลเข้า Finalist เวที LinkedIn Talent Awards 2025',
     date: '30 เมษายน 2569',
+    image: publicAsset('bluebik/news/Thumbnail-AGM.jpg'),
   },
 ]
 
@@ -226,20 +255,73 @@ export const clientVoices = [
     role: 'Chief Digital Transformation Officer, Big C Supercenter',
     quote:
       'ทีมงานของบลูบิคสามารถเรียนรู้และทำความเข้าใจได้อย่างรวดเร็ว ที่สำคัญยังต่อยอดไปถึงวิธีการแก้ไขปัญหาและให้คำแนะนำแบบ Best Practice',
-    image: '/bluebik/clients/Clients-Quote_bigc.png',
+    image: publicAsset('bluebik/clients/Clients-Quote_bigc.png'),
+    logo: publicAsset('bluebik/logos/BC-LOGO1.png'),
+  },
+  {
+    name: 'คุณสุภา จินคำพะเนา',
+    role: 'Head of Transformation Program Management Office, Central Retail Digital',
+    quote:
+      'บลูบิคมีชุดทักษะที่จะช่วยให้โปรเจกต์ประสบความสำเร็จ ทีมงานมีองค์ความรู้เชิงลึกและเข้าใจรายละเอียดของธุรกิจ e-Commerce เป็นอย่างดี',
+    image: publicAsset('bluebik/clients/Clients-Quote_central-tech.png'),
+    logo: publicAsset('bluebik/logos/Central-tech-Logo1.png'),
   },
   {
     name: 'คุณอนุพงศ์ คุตติกุล',
     role: 'CEO & Co-Founder, Carnival Supply',
     quote:
       'โซลูชันที่บลูบิค ไททันส์นำเสนอนั้นถูกต้อง เห็นผลจริง และตรงกับสิ่งที่คาร์นิวาลมองหา',
-    image: '/bluebik/clients/Clients-Quote_carnival.png',
+    image: publicAsset('bluebik/clients/Clients-Quote_carnival.png'),
+    logo: publicAsset('bluebik/logos/Carnival-Logo2.png'),
   },
   {
     name: 'คุณวีรภัทร จันทรวรรณกูล',
     role: 'Chief Technology Officer, InnovestX',
     quote:
-      'สิ่งที่ประทับใจคือเรื่อง Commitment ทีมงานบลูบิคมุ่งมั่นที่จะทำให้สำเร็จตามเป้าหมายเพื่อส่งมอบผลลัพธ์ที่ดีที่สุด',
-    image: '/bluebik/clients/Clients-Quote_innovestx.jpg',
+      'สิ่งที่ผมประทับใจคือเรื่อง Commitment ถ้ามีข้อตกลงร่วมกันแล้ว ทีมงานของบลูบิคตั้งแต่ระดับบริหารจนถึงระดับปฏิบัติการก็มุ่งมั่นที่จะทำให้สำเร็จตามนั้น โดยมีเป้าหมายเพื่อส่งมอบผลลัพธ์ที่ดีที่สุดและตรงกับความต้องการของลูกค้า',
+    image: publicAsset('bluebik/clients/Clients-Quote_innovestx.jpg'),
+    logo: publicAsset('bluebik/logos/InnovestX-Logo1.png'),
+  },
+  {
+    name: 'คุณเรือรบ ติยะชาติ',
+    role: 'Executive Vice President, Muang Thai Life Assurance',
+    quote:
+      'บลูบิคไม่เหมือนคู่ค้าทางธุรกิจทั่วไปที่พยายามจะทำให้งานเสร็จ แต่เน้นที่การแก้ไขปัญหา และหาวิธีปรับปรุงเพื่อนำเสนอผลลัพธ์ที่ดีที่สุด',
+    image: publicAsset('bluebik/clients/Clients-Quote_mtl-1.png'),
+    logo: publicAsset('bluebik/logos/MTL-LOGO1.png'),
+  },
+  {
+    name: 'คุณวิศน สุนทราจารย์',
+    role: 'Senior Executive Vice President, PTT Oil and Retail Business',
+    quote:
+      'บลูบิคและโออาร์ทำงานร่วมกันในลักษณะพาร์ตเนอร์ทางธุรกิจ บลูบิคเต็มใจที่จะส่งต่อองค์ความรู้ให้กับทีมงานของโออาร์ ทำให้เมื่อจบโปรเจกต์แล้ว โออาร์สามารถนำไปต่อยอดพัฒนาเองได้',
+    image: publicAsset('bluebik/clients/Clients-Quote_or2.jpg'),
+    logo: publicAsset('bluebik/logos/OR-LOGO1.png'),
   },
 ]
+
+export const clientLogos = [
+  { name: 'Big C', asset: publicAsset('bluebik/logos/BC-LOGO1.png') },
+  { name: 'Central Tech', asset: publicAsset('bluebik/logos/Central-tech-Logo1.png') },
+  { name: 'Carnival', asset: publicAsset('bluebik/logos/Carnival-Logo2.png') },
+  { name: 'InnovestX', asset: publicAsset('bluebik/logos/InnovestX-Logo1.png') },
+  {
+    name: 'Muang Thai Life Assurance',
+    asset: publicAsset('bluebik/logos/MTL-LOGO1.png'),
+  },
+  { name: 'PTT OR', asset: publicAsset('bluebik/logos/OR-LOGO1.png') },
+]
+
+export const videoCta = {
+  eyebrow: 'We relentlessly pursue our ambitions',
+  subtitle: 'our ambitions',
+  video: publicAsset('bluebik/video/BlueBik-Corporate_FHD_NO_LOGO-veryfast1.mp4'),
+}
+
+export const careerCta = {
+  eyebrow: 'JOIN THE TEAM THAT DOES THINGS DIFFERENTLY.',
+  title: 'เพราะคนคือหัวใจสำคัญ เราจึงมุ่งสร้างและดูแลความสัมพันธ์ที่ดี',
+  description: 'ทั้งกับลูกค้าและกับเพื่อนร่วมงาน',
+  cta: 'ร่วมงานกับเรา',
+  image: publicAsset('bluebik/career/Career-HeroBanner-01.jpg'),
+}
