@@ -155,6 +155,46 @@
     animation: air-ticker 22s linear infinite;
   }
 
+  .bluebik-hero-slide {
+    animation: bluebik-hero-slide 15s cubic-bezier(0.25, 0.74, 0.22, 0.99) infinite;
+    opacity: 0;
+    transform: scale(1.08);
+  }
+
+  .bluebik-kicker {
+    animation: bluebik-fade-up 900ms cubic-bezier(0.25, 0.74, 0.22, 0.99) 280ms both;
+  }
+
+  .bluebik-card-lift {
+    transition:
+      border-color 450ms cubic-bezier(0.25, 0.74, 0.22, 0.99),
+      box-shadow 450ms cubic-bezier(0.25, 0.74, 0.22, 0.99),
+      transform 450ms cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  }
+
+  .bluebik-card-lift:hover {
+    border-color: rgba(5, 80, 181, 0.32);
+    box-shadow: 0 34px 80px -48px rgba(1, 22, 66, 0.55);
+    transform: translate3d(0, -8px, 0);
+  }
+
+  .bluebik-card-rail {
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .bluebik-card-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bluebik-card-rail > * {
+    scroll-snap-align: start;
+  }
+
+  .bluebik-marquee {
+    animation: bluebik-marquee 34s linear infinite;
+  }
+
   .mobile-menu-trigger {
     overflow: hidden;
     transition:
@@ -307,6 +347,46 @@
     transform: translateX(0);
   }
 
+  @keyframes bluebik-hero-slide {
+    0% {
+      opacity: 0;
+      transform: scale(1.08);
+    }
+
+    6%,
+    30% {
+      opacity: 1;
+    }
+
+    38%,
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bluebik-fade-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes bluebik-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   to {
     transform: translateX(-50%);
   }
@@ -413,5 +493,15 @@
   .air-reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .bluebik-hero-slide {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .bluebik-hero-slide:not(:first-child) {
+    opacity: 0;
   }
 }

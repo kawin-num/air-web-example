@@ -14,7 +14,7 @@ export interface SpaceCardProps {
 
 export function SpaceCard({ space }: SpaceCardProps) {
   return (
-    <Card className="group overflow-hidden border-bluebik-950/10 p-0">
+    <Card className="bluebik-card-lift group overflow-hidden border-bluebik-950/10 p-0">
       <div className={`relative h-64 bg-gradient-to-br ${accentClasses[space.accent]}`}>
         <img
           alt=""
@@ -23,7 +23,7 @@ export function SpaceCard({ space }: SpaceCardProps) {
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(4,36,109,0.48))]" />
         <ArrowUpRight
-          className="absolute right-5 top-5 size-7 rounded-full bg-white p-1 text-bluebik-900"
+          className="absolute right-5 top-5 size-8 rounded-full bg-white p-1.5 text-bluebik-900 transition group-hover:translate-x-1 group-hover:-translate-y-1"
           aria-hidden="true"
         />
       </div>
