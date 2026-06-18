@@ -12,11 +12,11 @@ const footerLinks = [
 ]
 
 const socialIcons = [
-  { label: 'Facebook', src: publicAsset('bluebik/social/icon-fb.svg') },
-  { label: 'Instagram', src: publicAsset('bluebik/social/icon-ig.svg') },
-  { label: 'LinkedIn', src: publicAsset('bluebik/social/icon-linkedin.svg') },
-  { label: 'TikTok', src: publicAsset('bluebik/social/icon-tiktok.svg') },
-  { label: 'X', src: publicAsset('bluebik/social/icon-x.svg') },
+  { label: 'Facebook', src: publicAsset('bluebik/social/icon-fb.svg'), url: 'https://www.facebook.com/bluebik' },
+  { label: 'Instagram', src: publicAsset('bluebik/social/icon-ig.svg'), url: 'https://www.instagram.com/bluebik' },
+  { label: 'LinkedIn', src: publicAsset('bluebik/social/icon-linkedin.svg'), url: 'https://www.linkedin.com/company/bluebik' },
+  { label: 'TikTok', src: publicAsset('bluebik/social/icon-tiktok.svg'), url: 'https://www.tiktok.com/@bluebik' },
+  { label: 'X', src: publicAsset('bluebik/social/icon-x.svg'), url: 'https://x.com/bluebik' },
 ]
 
 export function Footer() {
@@ -65,12 +65,16 @@ export function Footer() {
             ))}
             <div className="flex gap-3 pt-4 md:justify-end">
               {socialIcons.map((icon) => (
-                <span
+                <a
                   key={icon.label}
-                  className="grid size-9 place-items-center rounded-full border border-white/15 bg-white/10"
+                  href={icon.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid size-9 place-items-center rounded-full border border-white/15 bg-white/10 transition hover:bg-white/20 hover:border-white/30"
+                  aria-label={icon.label}
                 >
-                  <img alt={icon.label} className="size-4" src={icon.src} />
-                </span>
+                  <img alt="" className="size-4" src={icon.src} />
+                </a>
               ))}
             </div>
             <span className="pt-4 text-xs text-white/45">

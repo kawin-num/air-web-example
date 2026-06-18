@@ -278,9 +278,25 @@ export const clientVoices = [
     name: 'คุณวีรภัทร จันทรวรรณกูล',
     role: 'Chief Technology Officer, InnovestX',
     quote:
-      'สิ่งที่ประทับใจคือเรื่อง Commitment ทีมงานบลูบิคมุ่งมั่นที่จะทำให้สำเร็จตามเป้าหมายเพื่อส่งมอบผลลัพธ์ที่ดีที่สุด',
+      'สิ่งที่ผมประทับใจคือเรื่อง Commitment ถ้ามีข้อตกลงร่วมกันแล้ว ทีมงานของบลูบิคตั้งแต่ระดับบริหารจนถึงระดับปฏิบัติการก็มุ่งมั่นที่จะทำให้สำเร็จตามนั้น โดยมีเป้าหมายเพื่อส่งมอบผลลัพธ์ที่ดีที่สุดและตรงกับความต้องการของลูกค้า',
     image: publicAsset('bluebik/clients/Clients-Quote_innovestx.jpg'),
     logo: publicAsset('bluebik/logos/InnovestX-Logo1.png'),
+  },
+  {
+    name: 'คุณเรือรบ ติยะชาติ',
+    role: 'Executive Vice President, Muang Thai Life Assurance',
+    quote:
+      'บลูบิคไม่เหมือนคู่ค้าทางธุรกิจทั่วไปที่พยายามจะทำให้งานเสร็จ แต่เน้นที่การแก้ไขปัญหา และหาวิธีปรับปรุงเพื่อนำเสนอผลลัพธ์ที่ดีที่สุด',
+    image: publicAsset('bluebik/clients/Clients-Quote_mtl-1.png'),
+    logo: publicAsset('bluebik/logos/MTL-LOGO1.png'),
+  },
+  {
+    name: 'คุณวิศน สุนทราจารย์',
+    role: 'Senior Executive Vice President, PTT Oil and Retail Business',
+    quote:
+      'บลูบิคและโออาร์ทำงานร่วมกันในลักษณะพาร์ตเนอร์ทางธุรกิจ บลูบิคเต็มใจที่จะส่งต่อองค์ความรู้ให้กับทีมงานของโออาร์ ทำให้เมื่อจบโปรเจกต์แล้ว โออาร์สามารถนำไปต่อยอดพัฒนาเองได้',
+    image: publicAsset('bluebik/clients/Clients-Quote_or2.jpg'),
+    logo: publicAsset('bluebik/logos/OR-LOGO1.png'),
   },
 ]
 
@@ -295,6 +311,12 @@ export const clientLogos = [
   },
   { name: 'PTT OR', asset: publicAsset('bluebik/logos/OR-LOGO1.png') },
 ]
+
+export const videoCta = {
+  eyebrow: 'We relentlessly pursue our ambitions',
+  subtitle: 'our ambitions',
+  video: publicAsset('bluebik/video/BlueBik-Corporate_FHD_NO_LOGO-veryfast1.mp4'),
+}
 
 export const careerCta = {
   eyebrow: 'JOIN THE TEAM THAT DOES THINGS DIFFERENTLY.',

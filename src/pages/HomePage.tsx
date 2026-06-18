@@ -5,7 +5,7 @@ import { MomentumSection } from '../components/sections/MomentumSection'
 import { SectionHeading } from '../components/sections/SectionHeading'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { careerCta, clientLogos, clientVoices, insights, newsroom } from '../data/content'
+import { careerCta, clientLogos, clientVoices, insights, newsroom, videoCta } from '../data/content'
 
 export default function HomePage() {
   return (
@@ -24,6 +24,17 @@ export default function HomePage() {
           tone="dark"
         />
         <FeaturedSpaces />
+      </section>
+      <section className="relative h-screen overflow-hidden bg-bluebik-950">
+        <video
+          autoPlay
+          className="absolute inset-0 h-full w-full object-cover"
+          loop
+          muted
+          playsInline
+          src={videoCta.video}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-bluebik-950/5 via-bluebik-950/30 to-bluebik-950/60" />
       </section>
       <section className="overflow-hidden bg-white px-4 py-20 text-bluebik-950 sm:px-5 md:py-28">
         <div className="mx-auto flex max-w-[1920px] items-end justify-between gap-6">
@@ -96,22 +107,24 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      <section className="bg-white px-4 py-20 text-bluebik-950 sm:px-5 md:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-700 px-4 py-20 text-white sm:px-5 md:py-28">
+        <div className="absolute inset-0 opacity-20"><div className="bluebik-marquee absolute inset-0 flex items-center gap-10 whitespace-nowrap font-display text-[22vw] font-bold uppercase leading-none tracking-[-0.09em]">voices voices voices</div></div>
         <SectionHeading
           eyebrow="Client voices"
           title="ความประทับใจจากลูกค้า"
           description="เสียงจากลูกค้าที่สะท้อน commitment และผลลัพธ์จากการทำงานร่วมกับ Bluebik"
+          tone="dark"
         />
-        <div className="mx-auto mt-12 grid w-full max-w-[1920px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="relative z-10 mx-auto mt-12 grid w-full max-w-[1920px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {clientVoices.map((voice) => (
             <article
               key={voice.name}
-              className="bluebik-card-lift air-rounded border border-bluebik-950/10 bg-white p-4 shadow-xl shadow-blue-950/5 sm:p-6"
+              className="bluebik-card-lift air-rounded border border-white/30 bg-white/10 backdrop-blur-md p-4 shadow-xl shadow-black/20 sm:p-6"
             >
-              <div className="mb-6 flex h-12 items-center justify-center">
+              <div className="mb-6 flex h-12 items-center justify-center opacity-90">
                 <img
                   alt=""
-                  className="max-h-12 max-w-32 object-contain"
+                  className="max-h-12 max-w-40 object-contain"
                   src={voice.logo}
                 />
               </div>
@@ -123,28 +136,30 @@ export default function HomePage() {
                 />
               </div>
               <div className="px-2 pb-2 pt-6 text-center sm:px-6 sm:pb-0">
-                <p className="text-sm leading-7 text-bluebik-950/70 sm:text-base">
+                <p className="text-sm leading-7 text-white/80 sm:text-base">
                   &ldquo;{voice.quote}&rdquo;
                 </p>
-                <h3 className="mt-6 font-display text-2xl font-semibold tracking-[-0.04em] sm:text-[2rem]">
+                <h3 className="mt-6 font-display text-2xl font-semibold tracking-[-0.04em] text-white sm:text-[2rem]">
                   {voice.name}
                 </h3>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-bluebik-700">
+                <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-200">
                   {voice.role}
                 </p>
               </div>
             </article>
           ))}
         </div>
-        <div className="bluebik-marquee mt-14 flex items-center gap-10 whitespace-nowrap">
-          {[...clientLogos, ...clientLogos].map((logo, index) => (
-            <img
-              key={`${logo.name}-${index}`}
-              alt={logo.name}
-              className="max-h-12 max-w-36 object-contain opacity-55 grayscale"
-              src={logo.asset}
-            />
-          ))}
+        <div className="relative z-10 mt-14 flex justify-center overflow-hidden">
+          <div className="bluebik-marquee flex items-center gap-10 whitespace-nowrap">
+            {clientLogos.map((logo) => (
+              <img
+                key={logo.name}
+                alt={logo.name}
+                className="max-h-12 max-w-36 object-contain opacity-65"
+                src={logo.asset}
+              />
+            ))}
+          </div>
         </div>
       </section>
       <section className="relative overflow-hidden bg-bluebik-950 px-4 py-20 text-white sm:px-5 md:py-28">

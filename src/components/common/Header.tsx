@@ -1,44 +1,75 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowUpRight, Globe2, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { navigationItems } from '../../data/navigation'
 import { useUiStore } from '../../stores/useUiStore'
 import { publicAsset } from '../../utils/publicAsset'
 import { Button } from '../ui/Button'
 
-function navigationClass({ isActive }: { isActive: boolean }) {
+function navigationClass({ isActive, isScrolled }: { isActive: boolean; isScrolled: boolean }) {
   return [
     'rounded-full px-4 py-3 text-sm font-semibold uppercase tracking-wide transition',
-    isActive
-      ? 'bg-white/18 text-white'
-      : 'text-white/82 hover:bg-white/10 hover:text-white',
+    isScrolled
+      ? isActive
+        ? 'bg-bluebik-950/10 text-bluebik-950'
+        : 'text-bluebik-950/60 hover:bg-bluebik-950/10 hover:text-bluebik-950'
+      : isActive
+        ? 'bg-white/18 text-white'
+        : 'text-white/82 hover:bg-white/10 hover:text-white',
   ].join(' ')
 }
 
 export function Header() {
   const { closeMobileMenu, isMobileMenuOpen, setMobileMenuOpen } = useUiStore()
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const videoSectionHeight = window.innerHeight
+      setIsScrolled(scrollPosition > videoSectionHeight * 0.8)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-white/15 bg-bluebik-950/10 text-white backdrop-blur-sm">
+    <header
+      className={`fixed inset-x-0 top-0 z-40 border-b transition-colors duration-300 ${
+        isScrolled
+          ? 'border-bluebik-950/10 bg-white text-bluebik-950 backdrop-blur-sm'
+          : 'border-white/15 bg-bluebik-950/10 text-white backdrop-blur-sm'
+      }`}
+    >
       <nav
         aria-label="เมนูหลัก"
         className="flex items-center justify-between px-4 py-4 sm:px-5"
       >
         <Link
           to="/"
-          className="grid h-12 w-36 place-items-center"
+          className={`grid place-items-center transition-all ${
+            isScrolled ? 'h-10 w-32' : 'h-12 w-36'
+          }`}
           aria-label="Bluebik home"
         >
           <img
             alt=""
-            className="h-8 w-full object-contain brightness-0 invert"
+            className={`w-full object-contain transition-all ${
+              isScrolled ? 'h-6' : 'h-8'
+            } ${isScrolled ? '' : 'brightness-0 invert'}`}
             src={publicAsset('bluebik/design/site-logo-2.svg')}
           />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
           {navigationItems.map((item) => (
-            <NavLink key={item.href} to={item.href} className={navigationClass}>
+            <NavLink
+              key={item.href}
+              to={item.href}
+              className={({ isActive }) => navigationClass({ isActive, isScrolled })}
+            >
               {item.label}
             </NavLink>
           ))}
@@ -47,7 +78,11 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Button
             aria-label="เปลี่ยนภาษา"
-            className="hidden size-12 rounded-full border-white/20 bg-white/0 p-0 text-xs font-bold text-white hover:bg-white/10 sm:inline-flex"
+            className={`hidden size-12 rounded-full p-0 text-xs font-bold sm:inline-flex transition-colors ${
+              isScrolled
+                ? 'border-bluebik-950/20 bg-bluebik-950/0 text-bluebik-950 hover:bg-bluebik-950/10'
+                : 'border-white/20 bg-white/0 text-white hover:bg-white/10'
+            }`}
             variant="ghost"
           >
             TH
@@ -55,7 +90,11 @@ export function Header() {
           </Button>
           <Button
             asChild
-            className="hidden border-white/20 bg-white text-bluebik-950 hover:bg-blue-100 md:inline-flex"
+            className={`hidden md:inline-flex transition-colors ${
+              isScrolled
+                ? 'border-bluebik-950/20 bg-bluebik-950 text-white hover:bg-bluebik-800'
+                : 'border-white/20 bg-white text-bluebik-950 hover:bg-blue-100'
+            }`}
             size="sm"
           >
             <Link to="/contact">ติดต่อเรา</Link>
