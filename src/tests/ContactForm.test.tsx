@@ -33,7 +33,7 @@ describe('ContactForm', () => {
     await user.click(screen.getByRole('button', { name: /ส่งข้อมูล/i }))
 
     expect(await screen.findByRole('status')).toHaveTextContent(
-      'รับข้อมูลแล้ว ทีมงานจะติดต่อกลับโดยเร็ว',
+      'รับข้อมูลแล้ว ทีม Bluebik จะติดต่อกลับโดยเร็ว',
     )
   })
 

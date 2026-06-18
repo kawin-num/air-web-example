@@ -3,20 +3,20 @@ import { AnimatedReveal } from '../common/AnimatedReveal'
 
 export function LocationSection() {
   return (
-    <section className="bg-white px-4 py-20 text-black sm:px-5 md:py-28">
+    <section className="bg-white px-4 py-20 text-bluebik-950 sm:px-5 md:py-28">
       <div className="mx-auto grid max-w-[1920px] gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-center">
         <AnimatedReveal>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/40">
-            Location
+            Industries
           </p>
           <h2 className="air-editorial-text mt-8 max-w-4xl font-display font-normal">
-            Connected to the city rhythm
+            Built for industries moving at digital speed
           </h2>
           <div className="mt-10 grid gap-3">
             {locationNodes.map((node) => (
               <p
                 key={node}
-                className="border-t border-black/15 py-4 text-sm font-semibold uppercase tracking-wide text-black/55"
+                className="border-t border-bluebik-950/15 py-4 text-sm font-semibold uppercase tracking-wide text-bluebik-950/60"
               >
                 {node}
               </p>
@@ -25,7 +25,7 @@ export function LocationSection() {
         </AnimatedReveal>
 
         <AnimatedReveal
-          className="air-animated-lines relative min-h-[38rem] overflow-hidden rounded-[2rem] bg-neutral-950"
+          className="air-animated-lines relative min-h-[38rem] overflow-hidden rounded-[2rem] bg-bluebik-950"
           delay={140}
           variant="clip"
         >
@@ -46,7 +46,8 @@ export function LocationSection() {
             </div>
           ))}
           <p className="absolute bottom-6 left-6 right-6 max-w-xl text-3xl font-medium uppercase leading-none tracking-[-0.05em] text-white">
-            Abstract mobility map for business, lifestyle and airport routes.
+            Industry map for financial services, retail, manufacturing, energy, healthcare
+            and public sector transformation.
           </p>
         </AnimatedReveal>
       </div>

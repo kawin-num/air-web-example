@@ -3,7 +3,14 @@ import { useLeadForm } from '../../hooks/useLeadForm'
 import { Button } from '../ui/Button'
 import { Card } from '../ui/Card'
 
-const interestOptions = ['Brand experience', 'Event space', 'Architecture tour']
+const interestOptions = [
+  'Digital Transformation',
+  'Big Data & Artificial Intelligence',
+  'Cybersecurity & Digital Trust',
+  'SAP ERP Advisory & Implementation',
+  'Experience Design',
+  'Strategic PMO',
+]
 
 export function ContactForm() {
   const {
@@ -117,7 +124,7 @@ export function ContactForm() {
             className="rounded-2xl bg-emerald-50 px-4 py-3 text-sm text-emerald-800"
             role="status"
           >
-            รับข้อมูลแล้ว ทีมงานจะติดต่อกลับโดยเร็ว
+            รับข้อมูลแล้ว ทีม Bluebik จะติดต่อกลับโดยเร็ว
           </p>
         ) : null}
 

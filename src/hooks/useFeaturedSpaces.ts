@@ -26,7 +26,7 @@ export function useFeaturedSpaces() {
         }
 
         const message =
-          error instanceof Error ? error.message : 'ไม่สามารถโหลดข้อมูลพื้นที่ได้'
+          error instanceof Error ? error.message : 'ไม่สามารถโหลดข้อมูลบริการได้'
 
         setState({ data: [], error: message, isLoading: false })
       })

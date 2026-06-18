@@ -6,12 +6,12 @@ import { server } from '../mocks/server'
 import { renderWithRouter } from '../test/test-utils'
 
 describe('FeaturedSpaces', () => {
-  it('renders spaces returned by the API', async () => {
+  it('renders services returned by the API', async () => {
     renderWithRouter(<FeaturedSpaces />)
 
-    expect(screen.getByText('กำลังโหลดพื้นที่แนะนำ')).toBeInTheDocument()
-    expect(await screen.findByText('Lobby Atrium')).toBeInTheDocument()
-    expect(screen.getByText('Sky Gallery')).toBeInTheDocument()
+    expect(screen.getByText('กำลังโหลดบริการแนะนำ')).toBeInTheDocument()
+    expect(await screen.findByText('Management Consulting')).toBeInTheDocument()
+    expect(screen.getByText('Big Data & Artificial Intelligence')).toBeInTheDocument()
   })
 
   it('shows fallback content when the API fails', async () => {
@@ -26,6 +26,6 @@ describe('FeaturedSpaces', () => {
     expect(await screen.findByRole('status')).toHaveTextContent(
       'โหลดข้อมูลจาก API ไม่สำเร็จ',
     )
-    expect(screen.getByText('Air Studio')).toBeInTheDocument()
+    expect(screen.getByText('Experience Design')).toBeInTheDocument()
   })
 })

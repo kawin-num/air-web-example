@@ -9,8 +9,12 @@ describe('FaqAccordion', () => {
     const user = userEvent.setup()
     renderWithRouter(<FaqAccordion />)
 
-    await user.click(screen.getByRole('button', { name: /ทำไมเลือก Radix UI/i }))
+    await user.click(
+      screen.getByRole('button', {
+        name: /Bluebik ช่วยองค์กรเริ่ม Digital Transformation อย่างไร/i,
+      }),
+    )
 
-    expect(screen.getByText(/Radix ให้ primitive/i)).toBeVisible()
+    expect(screen.getByText(/ออกแบบ roadmap/i)).toBeVisible()
   })
 })

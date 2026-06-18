@@ -3,19 +3,19 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    question: 'โครงนี้ต่อ API จริงได้อย่างไร?',
+    question: 'Bluebik ช่วยองค์กรเริ่ม Digital Transformation อย่างไร?',
     answer:
-      'service layer อ่าน VITE_API_BASE_URL จาก environment variable และแยก endpoint ออกจาก UI ทำให้เปลี่ยน backend ได้โดยไม่กระทบ component',
+      'เริ่มจากการทำความเข้าใจโจทย์ธุรกิจและเป้าหมายเชิงกลยุทธ์ ก่อนออกแบบ roadmap, solution และ delivery model ที่เหมาะกับองค์กร',
   },
   {
-    question: 'รองรับ mobile/tablet อย่างไร?',
+    question: 'บริการครอบคลุมด้านใดบ้าง?',
     answer:
-      'ใช้ responsive utility ของ Tailwind, mobile dialog navigation และ grid ที่ปรับจาก 1 เป็น 2-3 columns ตาม breakpoint',
+      'ครอบคลุม Management Consulting, Big Data & AI, Digital Excellence & Delivery, Cybersecurity, ERP advisory, Experience Design และ Strategic PMO',
   },
   {
-    question: 'ทำไมเลือก Radix UI?',
+    question: 'เว็บไซต์นี้พร้อมต่อยอดกับระบบจริงไหม?',
     answer:
-      'Radix ให้ primitive ที่ accessibility ดีตั้งแต่ต้น เช่น Dialog และ Accordion แล้วคุม visual design ด้วย Tailwind ได้เต็มที่',
+      'ยังคงแยก UI, services, hooks และ validation ออกจากกัน ทำให้ต่อ API, CMS หรือระบบ lead management จริงได้โดยไม่ต้องรื้อโครงหลัก',
   },
 ]
 
