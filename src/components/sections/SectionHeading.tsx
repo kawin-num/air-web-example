@@ -5,6 +5,7 @@ export interface SectionHeadingProps {
   title: string
   description?: string
   tone?: 'light' | 'dark'
+  fullWidth?: boolean
 }
 
 export function SectionHeading({
@@ -12,14 +13,15 @@ export function SectionHeading({
   eyebrow,
   title,
   tone = 'light',
+  fullWidth = false,
 }: SectionHeadingProps) {
   const isDark = tone === 'dark'
 
   return (
-    <div className="mx-auto max-w-3xl text-center">
+    <div className={`mx-auto max-w-3xl text-center ${fullWidth ? 'w-full' : ''}`}>
       <Badge tone={tone}>{eyebrow}</Badge>
       <h2
-        className={`air-editorial-text mt-6 font-display font-normal ${
+        className={`mt-6 font-display text-[clamp(1.8rem,5vw,4.5rem)] font-normal leading-[1.1] tracking-tighter ${
           isDark ? 'text-white' : 'text-black'
         }`}
       >

@@ -9,7 +9,17 @@ import { cn } from '../../utils/cn'
 
 export interface AnimatedRevealProps extends ComponentPropsWithoutRef<'div'> {
   delay?: number
-  variant?: 'default' | 'clip'
+  variant?:
+    | 'default'
+    | 'clip'
+    | 'scale'
+    | 'rotate'
+    | 'blur'
+    | 'slide-left'
+    | 'slide-right'
+    | 'stagger'
+  rootMargin?: string
+  threshold?: number | number[]
 }
 
 type RevealStyle = CSSProperties & {
@@ -21,6 +31,8 @@ export function AnimatedReveal({
   delay = 0,
   style,
   variant = 'default',
+  rootMargin = '0px 0px -12% 0px',
+  threshold = 0.16,
   ...props
 }: AnimatedRevealProps) {
   const elementRef = useRef<HTMLDivElement>(null)
@@ -41,17 +53,17 @@ export function AnimatedReveal({
           observer.disconnect()
         }
       },
-      { rootMargin: '0px 0px -12% 0px', threshold: 0.16 },
+      { rootMargin, threshold },
     )
 
     observer.observe(element)
 
     return () => observer.disconnect()
-  }, [])
+  }, [rootMargin, threshold])
 
   const revealClassName = cn(
     'air-reveal',
-    variant === 'clip' && 'air-reveal--clip',
+    variant !== 'default' && `air-reveal--${variant}`,
     isVisible && 'is-visible',
     className,
   )

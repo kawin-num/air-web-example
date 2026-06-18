@@ -28,25 +28,25 @@ export function SpaceCard({ space }: SpaceCardProps) {
         />
       </div>
       <div className="p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-bluebik-700">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-bluebik-700 group-hover:text-white">
           {space.category}
         </p>
-        <h3 className="mt-4 font-display text-3xl font-normal uppercase leading-none tracking-[-0.04em] text-bluebik-950">
+        <h3 className="mt-4 font-display text-3xl font-normal uppercase leading-none tracking-[-0.04em] text-bluebik-950 group-hover:text-white">
           {space.title}
         </h3>
-        <p className="mt-5 text-sm font-medium leading-6 text-bluebik-950/58">
+        <p className="mt-5 text-sm font-medium leading-6 text-bluebik-950/58 group-hover:text-white/80">
           {space.summary}
         </p>
-        <dl className="mt-6 grid gap-3 text-sm font-medium uppercase text-bluebik-950/65 sm:grid-cols-2">
+        <dl className="mt-6 grid gap-3 text-sm font-medium uppercase text-bluebik-950/65 group-hover:text-white sm:grid-cols-2">
           <div className="flex items-center gap-2">
-            <BriefcaseBusiness className="size-4 text-bluebik-800" aria-hidden="true" />
+            <BriefcaseBusiness className="size-4 text-bluebik-800 group-hover:text-white/80" aria-hidden="true" />
             <dt className="sr-only">Category</dt>
-            <dd>{space.category}</dd>
+            <dd className="group-hover:text-white">{space.category}</dd>
           </div>
           <div className="flex items-center gap-2">
-            <Sparkles className="size-4 text-bluebik-800" aria-hidden="true" />
+            <Sparkles className="size-4 text-bluebik-800 group-hover:text-white/80" aria-hidden="true" />
             <dt className="sr-only">Result</dt>
-            <dd>{space.result}</dd>
+            <dd className="group-hover:text-white">{space.result}</dd>
           </div>
         </dl>
       </div>

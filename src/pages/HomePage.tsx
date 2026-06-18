@@ -3,6 +3,7 @@ import { FeaturedSpaces } from '../components/sections/FeaturedSpaces'
 import { HeroSection } from '../components/sections/HeroSection'
 import { MomentumSection } from '../components/sections/MomentumSection'
 import { SectionHeading } from '../components/sections/SectionHeading'
+import { SectionAnimation, AnimatedContent } from '../components/common/SectionAnimation'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { careerCta, clientLogos, clientVoices, insights, newsroom, videoCta } from '../data/content'
@@ -12,8 +13,9 @@ export default function HomePage() {
     <>
       <HeroSection />
       <MomentumSection />
-      <section
+      <SectionAnimation
         id="services"
+        variant="fade-up"
         className="relative overflow-hidden bg-bluebik-950 py-20 text-white md:py-28"
       >
         <div className="pointer-events-none absolute -right-28 top-8 size-96 rounded-full bg-bluebik-500/20 blur-3xl" />
@@ -24,7 +26,7 @@ export default function HomePage() {
           tone="dark"
         />
         <FeaturedSpaces />
-      </section>
+      </SectionAnimation>
       <section className="relative h-screen overflow-hidden bg-bluebik-950">
         <video
           autoPlay
@@ -36,13 +38,13 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bluebik-950/5 via-bluebik-950/30 to-bluebik-950/60" />
       </section>
-      <section className="overflow-hidden bg-white px-4 py-20 text-bluebik-950 sm:px-5 md:py-28">
-        <div className="mx-auto flex max-w-[1920px] items-end justify-between gap-6">
-          <SectionHeading
-            eyebrow="Insights"
-            title="ตามทันทุกเทรนด์ด้านกลยุทธ์ นวัตกรรมและเทคโนโลยี"
-            description="All Insights"
-          />
+      <SectionAnimation variant="fade-up" className="overflow-hidden bg-white px-4 py-20 text-bluebik-950 sm:px-5 md:py-28">
+        <SectionHeading
+          eyebrow="Insights"
+          title="ตามทันทุกเทรนด์ด้านกลยุทธ์ นวัตกรรมและเทคโนโลยี"
+          description="All Insights"
+        />
+        <div className="mx-auto mt-12 flex max-w-[1920px] items-center justify-end gap-6 px-4 sm:px-5">
           <Link
             to="/work"
             className="hidden shrink-0 items-center gap-2 rounded-full border border-bluebik-950/15 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-bluebik-950 transition hover:bg-bluebik-950 hover:text-white md:inline-flex"
@@ -51,7 +53,7 @@ export default function HomePage() {
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
-        <div className="bluebik-card-rail mx-auto mt-12 flex max-w-[1920px] gap-5 overflow-x-auto pb-6">
+        <AnimatedContent className="bluebik-card-rail mx-auto mt-12 flex max-w-[1920px] gap-5 overflow-x-auto pb-6">
           {insights.map((item) => (
             <article
               key={item.title}
@@ -71,15 +73,15 @@ export default function HomePage() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-      <section className="bg-bluebik-50 px-4 py-20 text-bluebik-950 sm:px-5 md:py-28">
-        <div className="mx-auto flex max-w-[1920px] items-end justify-between gap-6">
-          <SectionHeading
-            eyebrow="Newsroom"
-            title="ติดตามข่าวและกิจกรรมล่าสุดของเรา"
-            description="All news"
-          />
+        </AnimatedContent>
+      </SectionAnimation>
+      <SectionAnimation variant="fade-scale" className="bg-bluebik-50 px-4 py-20 text-bluebik-950 sm:px-5 md:py-28">
+        <SectionHeading
+          eyebrow="Newsroom"
+          title="ติดตามข่าวและกิจกรรมล่าสุดของเรา"
+          description="All news"
+        />
+        <div className="mx-auto mt-12 flex max-w-[1920px] items-center justify-end gap-6 px-4 sm:px-5">
           <Link
             to="/work"
             className="hidden shrink-0 items-center gap-2 rounded-full bg-bluebik-950 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-bluebik-800 md:inline-flex"
@@ -88,7 +90,7 @@ export default function HomePage() {
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
-        <div className="mx-auto mt-12 grid max-w-[1920px] gap-5 md:grid-cols-3">
+        <AnimatedContent className="mx-auto mt-12 grid max-w-[1920px] gap-5 md:grid-cols-3" staggerDelay={120}>
           {newsroom.map((item) => (
             <article
               key={item.title}
@@ -105,9 +107,9 @@ export default function HomePage() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-700 px-4 py-20 text-white sm:px-5 md:py-28">
+        </AnimatedContent>
+      </SectionAnimation>
+      <SectionAnimation variant="fade-up" className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-700 px-4 py-20 text-white sm:px-5 md:py-28">
         <div className="absolute inset-0 opacity-20"><div className="bluebik-marquee absolute inset-0 flex items-center gap-10 whitespace-nowrap font-display text-[22vw] font-bold uppercase leading-none tracking-[-0.09em]">voices voices voices</div></div>
         <SectionHeading
           eyebrow="Client voices"
@@ -115,7 +117,7 @@ export default function HomePage() {
           description="เสียงจากลูกค้าที่สะท้อน commitment และผลลัพธ์จากการทำงานร่วมกับ Bluebik"
           tone="dark"
         />
-        <div className="relative z-10 mx-auto mt-12 grid w-full max-w-[1920px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <AnimatedContent className="relative z-10 mx-auto mt-12 grid w-full max-w-[1920px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {clientVoices.map((voice) => (
             <article
               key={voice.name}
@@ -148,7 +150,7 @@ export default function HomePage() {
               </div>
             </article>
           ))}
-        </div>
+        </AnimatedContent>
         <div className="relative z-10 mt-14 flex justify-center overflow-hidden">
           <div className="bluebik-marquee flex items-center gap-10 whitespace-nowrap">
             {clientLogos.map((logo) => (
@@ -161,8 +163,8 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
-      <section className="relative overflow-hidden bg-bluebik-950 px-4 py-20 text-white sm:px-5 md:py-28">
+      </SectionAnimation>
+      <SectionAnimation variant="fade-left" className="relative overflow-hidden bg-bluebik-950 px-4 py-20 text-white sm:px-5 md:py-28">
         <img
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-45"
@@ -187,7 +189,7 @@ export default function HomePage() {
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
-      </section>
+      </SectionAnimation>
       <AcquisitionSection />
     </>
   )
