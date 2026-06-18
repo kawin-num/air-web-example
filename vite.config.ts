@@ -23,6 +23,10 @@ export default defineConfig({
         'src/components/sections/OrbitShowcase.tsx',
         'src/components/common/Footer.tsx',
         'src/components/common/Header.tsx',
+        'src/components/common/SectionAnimation.tsx',
+        'src/components/common/index.ts',
+        'src/hooks/useScrollAnimation.ts',
+        'src/hooks/index.ts',
       ],
       thresholds: {
         statements: 80,

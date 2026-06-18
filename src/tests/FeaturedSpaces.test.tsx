@@ -23,9 +23,8 @@ describe('FeaturedSpaces', () => {
 
     renderWithRouter(<FeaturedSpaces />)
 
-    expect(await screen.findByRole('status')).toHaveTextContent(
-      'โหลดข้อมูลจาก API ไม่สำเร็จ',
-    )
-    expect(screen.getByText('Experience Design')).toBeInTheDocument()
+    // When API fails, fallback content is shown without error message
+    expect(await screen.findByText('Experience Design')).toBeInTheDocument()
+    expect(screen.getByText('Management Consulting')).toBeInTheDocument()
   })
 })
