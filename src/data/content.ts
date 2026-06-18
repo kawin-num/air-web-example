@@ -1,4 +1,5 @@
 import type { SpaceExperience } from '../types/space'
+import { publicAsset } from '../utils/publicAsset'
 
 export const heroStories = [
   {
@@ -46,7 +47,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ให้คำแนะนำตั้งแต่การกำหนดทิศทางเชิงกลยุทธ์ การบริหารทรัพยากร และการติดตามความคืบหน้าของโครงการผ่านเครื่องมือดิจิทัล',
     result: 'Business strategy to execution',
-    asset: '/bluebik/services/01-MC_Des.jpg',
+    asset: publicAsset('bluebik/services/01-MC_Des.jpg'),
     accent: 'blue',
   },
   {
@@ -56,7 +57,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ให้คำปรึกษาด้านกลยุทธ์และการจัดการข้อมูลขนาดใหญ่ รวมถึงปัญญาประดิษฐ์ เพื่อช่วยให้ธุรกิจใช้ข้อมูลให้เกิดประโยชน์สูงสุด',
     result: 'Enterprise data advantage',
-    asset: '/bluebik/services/03-AI_Des.jpg',
+    asset: publicAsset('bluebik/services/03-AI_Des.jpg'),
     accent: 'pearl',
   },
   {
@@ -66,7 +67,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ครอบคลุมการนำเทคโนโลยีเข้ามาปรับปรุงกระบวนการทำงาน เพิ่มประสิทธิภาพ และเสริมศักยภาพในการแข่งขัน',
     result: 'Digital delivery at scale',
-    asset: '/bluebik/services/02-DX_Des.jpg',
+    asset: publicAsset('bluebik/services/02-DX_Des.jpg'),
     accent: 'slate',
   },
   {
@@ -76,7 +77,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ช่วยองค์กรวางมาตรการป้องกันภัยคุกคามทางไซเบอร์ ลดความเสี่ยง และสร้างระบบความปลอดภัยที่มั่นคง',
     result: 'Trusted digital operations',
-    asset: '/bluebik/services/04-TITANS_Des.jpg',
+    asset: publicAsset('bluebik/services/04-TITANS_Des.jpg'),
     accent: 'blue',
   },
   {
@@ -86,7 +87,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'สร้างสรรค์นวัตกรรมด้วยระบบ ERP ที่ช่วยจัดการทรัพยากรองค์กรอย่างเป็นระบบ พร้อมเสริมศักยภาพด้วย SAP',
     result: 'Enterprise resource clarity',
-    asset: '/bluebik/services/05-SAP_Des.jpg',
+    asset: publicAsset('bluebik/services/05-SAP_Des.jpg'),
     accent: 'pearl',
   },
   {
@@ -96,7 +97,7 @@ export const fallbackSpaces: SpaceExperience[] = [
     summary:
       'ออกแบบประสบการณ์ที่ขับเคลื่อนธุรกิจ โดยมีมนุษย์เป็นศูนย์กลาง ผสานความคิดสร้างสรรค์เข้ากับเทคโนโลยี',
     result: 'Products people love',
-    asset: '/bluebik/services/06-XD_Des.jpg',
+    asset: publicAsset('bluebik/services/06-XD_Des.jpg'),
     accent: 'slate',
   },
 ]
@@ -108,7 +109,7 @@ export const serviceHighlights = [
     title: 'ออกแบบแนวทางบริหารโครงการที่ตอบสนองต่อการเปลี่ยนแปลงได้เร็ว',
     description:
       'เพิ่มความโปร่งใส ลดความซับซ้อน และเพิ่มประสิทธิภาพในการตัดสินใจ เพื่อขับเคลื่อนโครงการให้สำเร็จอย่างยั่งยืน',
-    asset: '/bluebik/services/07-PMO_Des.jpg',
+    asset: publicAsset('bluebik/services/07-PMO_Des.jpg'),
   },
   {
     id: 'dynamics-365',
@@ -116,7 +117,7 @@ export const serviceHighlights = [
     title: 'บริหารการเงินและซัพพลายเชนด้วย ERP อัจฉริยะ',
     description:
       'ช่วยเพิ่มความคล่องตัว ลดต้นทุน และเพิ่มประสิทธิภาพการดำเนินงานด้วย Dynamics 365 Finance & Supply Chain Management',
-    asset: '/bluebik/services/05-SAP_Des.jpg',
+    asset: publicAsset('bluebik/services/05-SAP_Des.jpg'),
   },
   {
     id: 'digital-trust',
@@ -124,7 +125,7 @@ export const serviceHighlights = [
     title: 'สร้างความเชื่อมั่นให้ระบบดิจิทัลตั้งแต่กลยุทธ์ถึงการปฏิบัติ',
     description:
       'วางโครงสร้างความปลอดภัยที่มั่นคง ลดความเสี่ยงทางไซเบอร์ และสร้าง digital trust สำหรับการเติบโต',
-    asset: '/bluebik/services/04-TITANS_Des.jpg',
+    asset: publicAsset('bluebik/services/04-TITANS_Des.jpg'),
   },
 ]
 
@@ -226,20 +227,20 @@ export const clientVoices = [
     role: 'Chief Digital Transformation Officer, Big C Supercenter',
     quote:
       'ทีมงานของบลูบิคสามารถเรียนรู้และทำความเข้าใจได้อย่างรวดเร็ว ที่สำคัญยังต่อยอดไปถึงวิธีการแก้ไขปัญหาและให้คำแนะนำแบบ Best Practice',
-    image: '/bluebik/clients/Clients-Quote_bigc.png',
+    image: publicAsset('bluebik/clients/Clients-Quote_bigc.png'),
   },
   {
     name: 'คุณอนุพงศ์ คุตติกุล',
     role: 'CEO & Co-Founder, Carnival Supply',
     quote:
       'โซลูชันที่บลูบิค ไททันส์นำเสนอนั้นถูกต้อง เห็นผลจริง และตรงกับสิ่งที่คาร์นิวาลมองหา',
-    image: '/bluebik/clients/Clients-Quote_carnival.png',
+    image: publicAsset('bluebik/clients/Clients-Quote_carnival.png'),
   },
   {
     name: 'คุณวีรภัทร จันทรวรรณกูล',
     role: 'Chief Technology Officer, InnovestX',
     quote:
       'สิ่งที่ประทับใจคือเรื่อง Commitment ทีมงานบลูบิคมุ่งมั่นที่จะทำให้สำเร็จตามเป้าหมายเพื่อส่งมอบผลลัพธ์ที่ดีที่สุด',
-    image: '/bluebik/clients/Clients-Quote_innovestx.jpg',
+    image: publicAsset('bluebik/clients/Clients-Quote_innovestx.jpg'),
   },
 ]

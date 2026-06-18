@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { navigationItems } from '../../data/navigation'
+import { publicAsset } from '../../utils/publicAsset'
 
 const footerLinks = [
   'บทความ',
@@ -11,11 +12,11 @@ const footerLinks = [
 ]
 
 const socialIcons = [
-  { label: 'Facebook', src: '/bluebik/social/icon-fb.svg' },
-  { label: 'Instagram', src: '/bluebik/social/icon-ig.svg' },
-  { label: 'LinkedIn', src: '/bluebik/social/icon-linkedin.svg' },
-  { label: 'TikTok', src: '/bluebik/social/icon-tiktok.svg' },
-  { label: 'X', src: '/bluebik/social/icon-x.svg' },
+  { label: 'Facebook', src: publicAsset('bluebik/social/icon-fb.svg') },
+  { label: 'Instagram', src: publicAsset('bluebik/social/icon-ig.svg') },
+  { label: 'LinkedIn', src: publicAsset('bluebik/social/icon-linkedin.svg') },
+  { label: 'TikTok', src: publicAsset('bluebik/social/icon-tiktok.svg') },
+  { label: 'X', src: publicAsset('bluebik/social/icon-x.svg') },
 ]
 
 export function Footer() {
@@ -24,14 +25,14 @@ export function Footer() {
       <img
         alt=""
         className="pointer-events-none absolute inset-x-0 bottom-0 h-full w-full object-cover opacity-45"
-        src="/bluebik/design/footer-gradient.svg"
+        src={publicAsset('bluebik/design/footer-gradient.svg')}
       />
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.35fr_1fr] lg:px-8">
         <div>
           <img
             alt="Bluebik"
             className="h-10 w-auto brightness-0 invert"
-            src="/bluebik/design/footer-logo.svg"
+            src={publicAsset('bluebik/design/footer-logo.svg')}
           />
           <p className="mt-5 max-w-2xl text-sm leading-7 text-blue-100/85">
             Bluebik

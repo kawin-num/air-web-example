@@ -3,6 +3,7 @@ import { ArrowUpRight, Globe2, X } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 import { navigationItems } from '../../data/navigation'
 import { useUiStore } from '../../stores/useUiStore'
+import { publicAsset } from '../../utils/publicAsset'
 import { Button } from '../ui/Button'
 
 function navigationClass({ isActive }: { isActive: boolean }) {
@@ -31,7 +32,7 @@ export function Header() {
           <img
             alt=""
             className="h-7 w-full object-contain"
-            src="/bluebik/design/site-logo-2.svg"
+            src={publicAsset('bluebik/design/site-logo-2.svg')}
           />
         </Link>
 
