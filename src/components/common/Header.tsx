@@ -10,8 +10,8 @@ function navigationClass({ isActive }: { isActive: boolean }) {
   return [
     'rounded-full px-4 py-3 text-sm font-semibold uppercase tracking-wide transition',
     isActive
-      ? 'bg-black text-white'
-      : 'text-neutral-700 hover:bg-black/5 hover:text-black',
+      ? 'bg-white/18 text-white'
+      : 'text-white/82 hover:bg-white/10 hover:text-white',
   ].join(' ')
 }
 
@@ -19,24 +19,24 @@ export function Header() {
   const { closeMobileMenu, isMobileMenuOpen, setMobileMenuOpen } = useUiStore()
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 text-black">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-white/15 bg-bluebik-950/10 text-white backdrop-blur-sm">
       <nav
         aria-label="เมนูหลัก"
         className="flex items-center justify-between px-4 py-4 sm:px-5"
       >
         <Link
           to="/"
-          className="grid h-12 w-32 place-items-center rounded-full bg-white px-4 shadow-lg shadow-blue-950/10 backdrop-blur"
+          className="grid h-12 w-36 place-items-center"
           aria-label="Bluebik home"
         >
           <img
             alt=""
-            className="h-7 w-full object-contain"
+            className="h-8 w-full object-contain brightness-0 invert"
             src={publicAsset('bluebik/design/site-logo-2.svg')}
           />
         </Link>
 
-        <div className="hidden items-center rounded-full border border-black/10 bg-white/80 p-1 shadow-lg shadow-black/5 backdrop-blur-xl lg:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {navigationItems.map((item) => (
             <NavLink key={item.href} to={item.href} className={navigationClass}>
               {item.label}
@@ -47,15 +47,15 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Button
             aria-label="เปลี่ยนภาษา"
-            className="hidden size-12 rounded-full p-0 text-xs font-bold sm:inline-flex"
-            variant="secondary"
+            className="hidden size-12 rounded-full border-white/20 bg-white/0 p-0 text-xs font-bold text-white hover:bg-white/10 sm:inline-flex"
+            variant="ghost"
           >
             TH
             <Globe2 className="ml-1 size-4" aria-hidden="true" />
           </Button>
           <Button
             asChild
-            className="hidden uppercase tracking-wide md:inline-flex"
+            className="hidden border-white/20 bg-white text-bluebik-950 hover:bg-blue-100 md:inline-flex"
             size="sm"
           >
             <Link to="/contact">ติดต่อเรา</Link>

@@ -3,28 +3,28 @@ import { publicAsset } from '../utils/publicAsset'
 
 export const heroStories = [
   {
-    eyebrow: 'AI-Led Enterprise Digital Transformation',
-    title: 'AI-Led Enterprise Digital Transformation',
+    eyebrow: 'Ambition to Excellence',
+    title: 'Ambition to Excellence',
     description:
-      'บลูบิคเป็นพาร์ตเนอร์ที่ปรึกษาชั้นนำด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร และการประยุกต์ใช้ AI ระดับองค์กร',
-    cta: 'อ่านเพิ่มเติม',
-    image: publicAsset('bluebik/hero/Homepage-Herobanner-CEO-Survey.jpg'),
-  },
-  {
-    eyebrow: 'Thailand’s AI-Driven Leadership Report',
-    title: 'Thailand’s AI-Driven Leadership Report',
-    description:
-      'Bluebik Group ร่วมกับ THE STANDARD และ Sauce Skills เผยแพร่รายงานเชิงลึกจากการถอดบทเรียนผู้บริหารระดับสูงกว่า 100 องค์กรไทย',
-    cta: 'อ่านรายงาน',
-    image: publicAsset('bluebik/hero/Website-Banner-1600x900px-1.jpg'),
+      'บลูบิคเป็นที่ปรึกษาด้านกลยุทธ์และการจัดการด้วยนวัตกรรมและเทคโนโลยีระดับโลก และผู้ให้บริการด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร',
+    video: publicAsset('bluebik/video/Home-Page-Banner1.mp4'),
+    poster: publicAsset('bluebik/hero/Website-Banner-1600x900px-1.jpg'),
   },
   {
     eyebrow: 'Ambition to Excellence',
     title: 'Ambition to Excellence',
     description:
       'บลูบิคเป็นที่ปรึกษาด้านกลยุทธ์และการจัดการด้วยนวัตกรรมและเทคโนโลยีระดับโลก และผู้ให้บริการด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร',
-    cta: 'อ่านเพิ่มเติม',
-    image: publicAsset('bluebik/hero/footer-banner.jpg'),
+    video: publicAsset('bluebik/video/VideoHero-Homep-page.mp4'),
+    poster: publicAsset('bluebik/hero/footer-banner.jpg'),
+  },
+  {
+    eyebrow: 'Ambition to Excellence',
+    title: 'Ambition to Excellence',
+    description:
+      'บลูบิคเป็นที่ปรึกษาด้านกลยุทธ์และการจัดการด้วยนวัตกรรมและเทคโนโลยีระดับโลก และผู้ให้บริการด้านดิจิทัลทรานส์ฟอร์เมชันแบบครบวงจร',
+    video: publicAsset('bluebik/video/Home-Page-Banner3.mp4'),
+    poster: publicAsset('bluebik/hero/Homepage-Herobanner-CEO-Survey.jpg'),
   },
 ]
 

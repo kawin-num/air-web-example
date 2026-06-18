@@ -22,10 +22,10 @@ describe('visual editorial sections', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /AI-Led\s*Enterprise\s*Digital Transformation/i,
+        name: /Ambition to Excellence/i,
       }),
     ).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /ดูบริการของ Bluebik/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /Scroll Down/i })).toHaveAttribute(
       'href',
       '/#services',
     )

@@ -161,6 +161,56 @@
     transform: scale(1.08);
   }
 
+  .bluebik-video-slide {
+    opacity: 0;
+    transform: scale(1.04);
+    transition:
+      opacity 900ms cubic-bezier(0.25, 0.74, 0.22, 0.99),
+      transform 1800ms cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  }
+
+  .bluebik-video-slide.is-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .bluebik-hero-title {
+    animation: bluebik-fade-up 900ms cubic-bezier(0.25, 0.74, 0.22, 0.99) 380ms both;
+    text-shadow: 0 18px 65px rgba(1, 22, 66, 0.28);
+  }
+
+  .bluebik-hero-copy {
+    animation: bluebik-fade-up 900ms cubic-bezier(0.25, 0.74, 0.22, 0.99) 520ms both;
+    text-shadow: 0 12px 45px rgba(1, 22, 66, 0.45);
+  }
+
+  .bluebik-hero-nav {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 999px;
+    color: #011642;
+    display: inline-flex;
+    height: 3rem;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    transition:
+      background 300ms ease,
+      transform 300ms ease;
+    width: 3rem;
+    z-index: 20;
+  }
+
+  .bluebik-hero-nav:hover {
+    background: #ffffff;
+    transform: translate3d(0, calc(-50% - 2px), 0);
+  }
+
+  .bluebik-scroll-cue svg {
+    animation: bluebik-scroll-bounce 1.6s ease-in-out infinite;
+  }
+
   .bluebik-kicker {
     animation: bluebik-fade-up 900ms cubic-bezier(0.25, 0.74, 0.22, 0.99) 280ms both;
   }
@@ -371,6 +421,17 @@
       transform: translate3d(0, 24px, 0);
     }
 
+    @keyframes bluebik-scroll-bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(8px);
+      }
+    }
+
     to {
       opacity: 1;
       transform: translate3d(0, 0, 0);
@@ -503,5 +564,15 @@
 
   .bluebik-hero-slide:not(:first-child) {
     opacity: 0;
+  }
+
+  .bluebik-video-slide,
+  .bluebik-video-slide.is-active,
+  .bluebik-hero-title,
+  .bluebik-hero-copy,
+  .bluebik-scroll-cue svg {
+    animation: none;
+    transform: none;
+    transition: none;
   }
 }
